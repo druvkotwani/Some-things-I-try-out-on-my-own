@@ -1,7 +1,6 @@
 import React from "react";
 import { testimonialData } from "@/utils/testimonialData";
 import Image from "next/image";
-import test from "node:test";
 
 interface TestimonialData {
   name: string;
@@ -14,65 +13,69 @@ interface TestimonialData {
 }
 
 const Testimonial: React.FC = () => {
-  return (
-    <div className="flex flex-col gap-4 ">
-      {testimonialData.map((testimonial: TestimonialData, index: number) => (
-        <div
-          key={testimonial.name}
-          className="p-4 border shadow-[0_1px_2px_0_rgb(0,0,0,0.07)] border-clr-border rounded-[0.75rem] w-[250px] sm:w-[300px]  "
-        >
-          <div key={index} className="flex flex-col gap-[0.5rem]">
-            {/* Image + name */}
-            <div className="flex justify-between  ">
-              <div className="flex  gap-2">
-                <Image
-                  src={testimonial.icon}
-                  alt={testimonial.name}
-                  width={42}
-                  height={42}
-                  className="rounded-full object-contain"
-                />
-                <div className="flex flex-col mt-1 ">
-                  <h3 className="text-[#374151] font-medium text-base leading-[20px]  ">
-                    {testimonial.name}
-                  </h3>
-                  <p className="text-clr-text-lt text-sm leading-[18px] ">
-                    {testimonial?.username}
-                  </p>
-                  <p className="text-clr-text-lt text-sm leading-[18px]">
-                    {testimonial?.about}
-                  </p>
-                </div>
+  const items = testimonialData.map(
+    (testimonial: TestimonialData, index: number) => (
+      <div
+        key={testimonial.name}
+        className="p-4 border shadow-[0_1px_2px_0_rgb(0,0,0,0.07)] border-clr-border rounded-[0.75rem] w-[250px] sm:w-[300px] scroll-item "
+      >
+        <div key={index} className="flex flex-col gap-[0.5rem]">
+          {/* Image + name */}
+          <div className="flex justify-between  ">
+            <div className="flex  gap-2">
+              <Image
+                src={testimonial.icon}
+                alt={testimonial.name}
+                width={42}
+                height={42}
+                className="rounded-full object-contain"
+              />
+              <div className="flex flex-col mt-1 ">
+                <h3 className="text-[#374151] font-medium text-base leading-[20px]  ">
+                  {testimonial.name}
+                </h3>
+                <p className="text-clr-text-lt text-sm leading-[18px] ">
+                  {testimonial?.username}
+                </p>
+                <p className="text-clr-text-lt text-sm leading-[18px]">
+                  {testimonial?.about}
+                </p>
               </div>
-
-              {testimonial.platform && (
-                <Image
-                  src={`/Images/${testimonial.platform}.png`}
-                  className="object-contain mb-2 rounded-full   "
-                  alt={testimonial.platform}
-                  width={42}
-                  height={42}
-                />
-              )}
             </div>
 
-            {/* Stars */}
-            <div className="flex gap-1">
-              {Array.from({ length: 5 }, (_, i) => (
-                <div key={i}>{star()}</div>
-              ))}
-            </div>
-
-            {/* Text */}
-            <p className="text-clr-text-lt text-sm leading-[18px]">
-              {testimonial.text}
-            </p>
-
-            {/* Date */}
-            <p className="opacity-[0.7] text-sm">{testimonial.date}</p>
+            {testimonial.platform && (
+              <Image
+                src={`/Images/${testimonial.platform}.png`}
+                className="object-contain mb-2 rounded-full   "
+                alt={testimonial.platform}
+                width={42}
+                height={42}
+              />
+            )}
           </div>
+
+          {/* Stars */}
+          <div className="flex gap-1">
+            {Array.from({ length: 5 }, (_, i) => (
+              <div key={i}>{star()}</div>
+            ))}
+          </div>
+
+          {/* Text */}
+          <p className="text-clr-text-lt text-sm leading-[18px]">
+            {testimonial.text}
+          </p>
+
+          {/* Date */}
+          <p className="opacity-[0.7] text-sm">{testimonial.date}</p>
         </div>
-      ))}
+      </div>
+    )
+  );
+  return (
+    <div className="scroll-container  gap-4 flex flex-col">
+      {items}
+      {items}
     </div>
   );
 };

@@ -6,3 +6,34 @@
   --clr-border: hsla(0, 0%, 90%, 1);
   --clr-text-lt: hsla(217, 19%, 37%, 1);
 }
+
+.scroll-container {
+  overflow: hidden;
+
+  height: 500px; /* Adjust based on your needs */
+  width: 300px; /* Adjust based on your needs */
+}
+
+.scroll-item {
+  width: 100%;
+  margin-top: 10px; /* Adjust based on your needs */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(
+      -1050px
+    ); /* Adjust based on the total height of your items */
+  }
+}
+
+.scroll-item {
+  animation: scroll 15s linear infinite;
+}
+/* Add this to pause the animation on hover */
+.scroll-container:hover .scroll-item {
+  animation-play-state: paused;
+}
