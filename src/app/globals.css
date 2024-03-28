@@ -8,15 +8,12 @@
 }
 
 .scroll-container {
-  overflow: hidden;
-
-  height: 500px; /* Adjust based on your needs */
+  height: 100%;
   width: 300px; /* Adjust based on your needs */
 }
 
 .scroll-item {
   width: 100%;
-  margin-top: 10px; /* Adjust based on your needs */
 }
 
 @keyframes scroll {

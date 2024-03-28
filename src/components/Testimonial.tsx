@@ -17,7 +17,7 @@ const Testimonial: React.FC = () => {
     (testimonial: TestimonialData, index: number) => (
       <div
         key={testimonial.name}
-        className="p-4 border shadow-[0_1px_2px_0_rgb(0,0,0,0.07)] border-clr-border rounded-[0.75rem] w-[250px] sm:w-[300px] scroll-item "
+        className="p-4 border shadow-[0_1px_2px_0_rgb(0,0,0,0.07)] border-clr-border rounded-[0.75rem]  scroll-item "
       >
         <div key={index} className="flex flex-col gap-[0.5rem]">
           {/* Image + name */}
