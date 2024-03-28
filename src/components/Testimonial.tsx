@@ -1,6 +1,7 @@
 import React from "react";
 import { testimonialData } from "@/utils/testimonialData";
 import Image from "next/image";
+import test from "node:test";
 
 interface TestimonialData {
   name: string;
@@ -8,6 +9,8 @@ interface TestimonialData {
   about?: string;
   icon: string;
   text: string;
+  date?: string;
+  platform?: string;
 }
 
 const Testimonial: React.FC = () => {
@@ -20,25 +23,37 @@ const Testimonial: React.FC = () => {
         >
           <div key={index} className="flex flex-col gap-[0.5rem]">
             {/* Image + name */}
-            <div className="flex  gap-2">
-              <Image
-                src={testimonial.icon}
-                alt={testimonial.name}
-                width={42}
-                height={42}
-                className="rounded-full"
-              />
-              <div className="flex flex-col mt-1 ">
-                <h3 className="text-[#374151] font-medium text-base leading-[20px]  ">
-                  {testimonial.name}
-                </h3>
-                <p className="text-clr-text-lt text-sm leading-[18px] ">
-                  {testimonial?.username}
-                </p>
-                <p className="text-clr-text-lt text-sm leading-[18px]">
-                  {testimonial?.about}
-                </p>
+            <div className="flex justify-between  ">
+              <div className="flex  gap-2">
+                <Image
+                  src={testimonial.icon}
+                  alt={testimonial.name}
+                  width={42}
+                  height={42}
+                  className="rounded-full object-contain"
+                />
+                <div className="flex flex-col mt-1 ">
+                  <h3 className="text-[#374151] font-medium text-base leading-[20px]  ">
+                    {testimonial.name}
+                  </h3>
+                  <p className="text-clr-text-lt text-sm leading-[18px] ">
+                    {testimonial?.username}
+                  </p>
+                  <p className="text-clr-text-lt text-sm leading-[18px]">
+                    {testimonial?.about}
+                  </p>
+                </div>
               </div>
+
+              {testimonial.platform && (
+                <Image
+                  src={`/Images/${testimonial.platform}.png`}
+                  className="object-contain mb-2 rounded-full   "
+                  alt={testimonial.platform}
+                  width={42}
+                  height={42}
+                />
+              )}
             </div>
 
             {/* Stars */}
@@ -52,6 +67,9 @@ const Testimonial: React.FC = () => {
             <p className="text-clr-text-lt text-sm leading-[18px]">
               {testimonial.text}
             </p>
+
+            {/* Date */}
+            <p className="opacity-[0.7] text-sm">{testimonial.date}</p>
           </div>
         </div>
       ))}

@@ -6,12 +6,6 @@ export const testimonialData = [
     text: "It was super smooth and the whole process with QuillAudits was beyond the expectations. As a start-up we guys are looking for something genuine & QuillAudits is way ahead of our expectations.",
   },
   {
-    name: "Kotwani",
-    about: "Founder of Startup Samachar",
-    icon: "https://randomuser.me/api/portraits/men/2.jpg",
-    text: "The process was made quite simple by QuillAudits. The turnaround time was less which was favorable for us.",
-  },
-  {
     name: "Aarohi Sharma",
     username: "@aarohi_sharma",
     icon: "https://randomuser.me/api/portraits/women/3.jpg",
@@ -42,6 +36,13 @@ export const testimonialData = [
     date: "16 June 2023",
   },
   {
+    name: "Kotwani",
+    about: "Founder of Startup Samachar",
+    icon: "https://randomuser.me/api/portraits/men/2.jpg",
+    text: "The process was made quite simple by QuillAudits. The turnaround time was less which was favorable for us.",
+  },
+
+  {
     name: "Aditya Desai",
     about: "CEO of Innovate Solutions",
     icon: "https://randomuser.me/api/portraits/men/8.jpg",
@@ -64,6 +65,12 @@ export const testimonialData = [
     text: "QuillAudits helped us streamline our tech infrastructure. Their expertise saved us time and resources. Definitely recommend their services.",
     platform: "twitter",
     date: "19 November 2023",
+  },
+  {
+    name: "Kotwani",
+    about: "Founder of Startup Samachar",
+    icon: "https://randomuser.me/api/portraits/men/2.jpg",
+    text: "The process was made quite simple by QuillAudits. The turnaround time was less which was favorable for us.",
   },
   {
     name: "Alisha Shah",
@@ -90,6 +97,12 @@ export const testimonialData = [
     date: "29 July 2023",
   },
   {
+    name: "Kotwani",
+    about: "Founder of Startup Samachar",
+    icon: "https://randomuser.me/api/portraits/men/2.jpg",
+    text: "The process was made quite simple by QuillAudits. The turnaround time was less which was favorable for us.",
+  },
+  {
     name: "Kunal Gupta",
     about: "CEO of TechGenius",
     icon: "https://randomuser.me/api/portraits/men/14.jpg",
@@ -114,11 +127,16 @@ export const testimonialData = [
     date: "18 October 2023",
   },
   {
+    name: "Kotwani",
+    about: "Founder of Startup Samachar",
+    icon: "https://randomuser.me/api/portraits/men/2.jpg",
+    text: "The process was made quite simple by QuillAudits. The turnaround time was less which was favorable for us.",
+  },
+  {
     name: "Sneha Gupta",
     username: "@sneha_gupta",
     icon: "https://randomuser.me/api/portraits/women/17.jpg",
     text: "The team at QuillAudits is highly professional and responsive. They delivered excellent results within a short timeframe.",
-    platform: "twitter",
     date: "25 May 2023",
   },
   {
@@ -135,14 +153,12 @@ export const testimonialData = [
     icon: "https://randomuser.me/api/portraits/women/19.jpg",
     text: "Working with QuillAudits was a great experience. They understood our requirements perfectly and delivered exceptional results.",
     platform: "facebook",
-    date: "12 August 2023",
   },
   {
     name: "Rajesh Khanna",
     about: "Founder of Tech Solutions Inc.",
     icon: "https://randomuser.me/api/portraits/men/20.jpg",
     text: "QuillAudits helped us optimize our processes, resulting in increased efficiency and productivity. Highly recommend their services.",
-    platform: "discord",
     date: "17 June 2023",
   },
 ];
